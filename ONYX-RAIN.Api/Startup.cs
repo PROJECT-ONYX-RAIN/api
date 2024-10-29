@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace ONYX-RAIN.Api
+namespace ONYX.RAIN.Api
 {
     public class Startup
     {
