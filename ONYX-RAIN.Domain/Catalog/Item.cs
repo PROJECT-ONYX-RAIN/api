@@ -1,10 +1,10 @@
 using System;
 
-namespace Onyx.Rain.Domain.Catalog
+namespace ONYX.RAIN.Domain.Catalog
 {
     public class Item
     {
-        public int ID {get; set;}
+        public int Id {get; set;}
         public string Name {get; set;}
         public string Description {get; set;}
         public string Brand {get; set;}

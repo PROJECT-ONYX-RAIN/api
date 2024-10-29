@@ -1,6 +1,6 @@
 using System;
 
-namespace Onyx.Rain.Domain.Catalog
+namespace ONYX.RAIN.Domain.Catalog
 {
     public class Rating
     {

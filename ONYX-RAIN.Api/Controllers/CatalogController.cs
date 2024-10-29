@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ONYX-RAIN.Data;              
-using ONYX-RAIN.Domain.Catalog;    
+using ONYX.RAIN.Data;              
+using ONYX.RAIN.Domain.Catalog;    
 
-namespace ONYX-RAIN.Api.Controllers
+namespace ONYX.RAIN.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -24,7 +24,7 @@ namespace ONYX-RAIN.Api.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            var item = _db.Items.FirstOrDefault(i => i.ID == id); // Querying a single item by ID from the database
+            var item = _db.Items.FirstOrDefault(i => i.Id == id); // Querying a single item by ID from the database
             if (item == null)
             {
                 return NotFound(); // Return NotFound if the item does not exist
@@ -37,13 +37,13 @@ namespace ONYX-RAIN.Api.Controllers
         {
             _db.Items.Add(item); // Adding a new item to the database
             _db.SaveChanges();  // Saving changes to the database
-            return CreatedAtAction(nameof(GetItem), new { id = item.ID }, item); // Return the URI of the created item and the item itself
+            return CreatedAtAction(nameof(GetItem), new { id = item.Id }, item); // Return the URI of the created item and the item itself
         }
 
         [HttpPost("{id:int}/ratings")]
         public IActionResult PostRating(int id, [FromBody] Rating rating)
         {
-            var item = _db.Items.FirstOrDefault(i => i.ID == id); // Find the item to add the rating to
+            var item = _db.Items.FirstOrDefault(i => i.Id == id); // Find the item to add the rating to
             if (item == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace ONYX-RAIN.Api.Controllers
         [HttpPut("{id:int}")]
         public IActionResult Put(int id, Item itemUpdate)
         {
-            var item = _db.Items.FirstOrDefault(i => i.ID == id);
+            var item = _db.Items.FirstOrDefault(i => i.Id == id);
             if (item == null)
             {
                 return NotFound();
