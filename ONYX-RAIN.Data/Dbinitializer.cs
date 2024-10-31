@@ -1,7 +1,7 @@
-using ONYX-RAIN.Domain.Catalog;
+using ONYX.RAIN.Domain.Catalog;
 using Microsoft.EntityFrameworkCore;
 
-namespace ONYX-RAIN.Data
+namespace ONYX.RAIN.Data
 {
     public static class DbInitializer
     {

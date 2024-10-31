@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ONYX-RAIN.Domain.Catalog;
+using ONYX.RAIN.Domain.Catalog;
 
-namespace ONYX-RAIN.Data
+namespace ONYX.RAIN.Data
 {
     public class StoreContext : DbContext
     {
