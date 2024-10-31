@@ -1,0 +1,9 @@
+POST http://localhost:5000/api/items
+Content-Type: application/json
+
+{
+  "name": "Shoes",
+  "description": "Running shoes",
+  "brand": "Nike",
+  "price": 109.99
+}
