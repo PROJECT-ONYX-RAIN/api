@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ONYX.RAIN.Data;              
 using ONYX.RAIN.Domain.Catalog;    
 
@@ -56,22 +57,22 @@ namespace ONYX.RAIN.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult PutItem(int id, [FromBody]Item)
+        public IActionResult PutItem(int id, [FromBody] Item item)
         {
             
-            if (id ≠ item.Id)
+            if (id != item.Id)
             {
                 return BadRequest();
             }
             
-            if (_db.Items.Find(id)=null)
+            if (_db.Items.Find(id) == null)
             {
                 return NotFound();
             }
             _db.Entry(item).State = EntityState.Modified;
             _db.SaveChanges();
 
-            return noContent();
+            return NoContent();
         }
 
         [HttpDelete("{id:int}")]
