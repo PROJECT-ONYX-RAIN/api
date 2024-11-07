@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ONYX-RAIN.Domain", "ONYX-RA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{83F2025B-14E3-48DE-B521-5AE96AC64A7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONYX.RAIN.Domain.Tests", "ONYX-RAIN.Domain\tests\ONYX.RAIN.Domain.Tests\ONYX.RAIN.Domain.Tests.csproj", "{FA2BAAD2-F1EB-4AA3-9FC7-6077BA38675F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONYX.RAIN.Domain.Tests", "tests\ONYX.RAIN.Domain.Tests\ONYX.RAIN.Domain.Tests.csproj", "{FA2BAAD2-F1EB-4AA3-9FC7-6077BA38675F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
