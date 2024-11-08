@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using ONYX.RAIN.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.AspNetCore.Antiforgery;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,10 +36,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
-
 app.UseCors();
-
 app.UseAuthorization();
 app.MapControllers();
 
