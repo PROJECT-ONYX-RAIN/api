@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ONYX.RAIN.Data;              
@@ -5,6 +6,7 @@ using ONYX.RAIN.Domain.Catalog;
 
 namespace ONYX.RAIN.Api.Controllers
 {
+    [EnableCors]
     [ApiController]
     [Route("[controller]")]
     public class CatalogController : ControllerBase
