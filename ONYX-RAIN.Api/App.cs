@@ -11,10 +11,16 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
+string authority = builder.Configuration["Auth0:Authority"] ??
+    throw new ArgumentNullException("Auth0:Authority");
+
+string audience = builder.Configuration["Auth0:Audience"] ??
+    throw new ArgumentNullException("Auth0:Audience");
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddDbContext<StoreContext>(options =>
-    options.UseSqlite("Data Source=ONYX-RAIN.sqlite", 
+    options.UseSqlite("Data Source=../Registrar.sqlite", 
     b => b.MigrationsAssembly("ONYX-RAIN.Api")));
 
 builder.Services.AddCors(options =>
